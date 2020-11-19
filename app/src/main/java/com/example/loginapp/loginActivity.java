@@ -1,6 +1,5 @@
 package com.example.loginapp;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -14,7 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class loginActivity extends AppCompatActivity {
 
     //UI elements
     Button loginButton, signUpButton;
@@ -33,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         //base setup
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.login_activity);
 
         //find UI elements
         loginButton = (Button)findViewById(R.id.loginButton);
@@ -64,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if(enteredPassword.equals(password)){
                     Toast.makeText(getApplicationContext(), "Redirecting...", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(MainActivity.this, maiActivity.class);
+                    Intent intent = new Intent(loginActivity.this, infosActivity.class);
                     startActivity(intent);
                 }
                 else{
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         signUpButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, homepageActivity.class);
+                Intent intent = new Intent(loginActivity.this, signupActivity.class);
                 startActivity(intent);
             }
         });

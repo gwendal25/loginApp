@@ -29,7 +29,7 @@ import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class homepageActivity extends AppCompatActivity {
+public class signupActivity extends AppCompatActivity {
     //Fields
     Button choosePicture, register;
     EditText name, familyName, password, confirmPassword;
@@ -51,7 +51,7 @@ public class homepageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homepage);
+        setContentView(R.layout.signup_page);
 
         //find views
         choosePicture = (Button)findViewById(R.id.choosePictureButton);
@@ -71,7 +71,7 @@ public class homepageActivity extends AppCompatActivity {
                         getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE
                 )!= PackageManager.PERMISSION_GRANTED){
                     ActivityCompat.requestPermissions(
-                            homepageActivity.this,
+                            signupActivity.this,
                             new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
                             REQUEST_CODE_STORAGE_PERMISSION
                     );
@@ -127,7 +127,7 @@ public class homepageActivity extends AppCompatActivity {
 
                     //change view with a little message
                     Toast.makeText(getApplicationContext(),"preferences changed succesfully", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(homepageActivity.this, MainActivity.class);
+                    Intent intent = new Intent(signupActivity.this, loginActivity.class);
                     startActivity(intent);
                 }
             }

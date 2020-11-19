@@ -44,9 +44,9 @@
             </intent-filter>
         </activity>
         -->
-        <activity android:name=".homepageActivity" />
-        <activity android:name=".maiActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".signupActivity" />
+        <activity android:name=".infosActivity" />
+        <activity android:name=".loginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
