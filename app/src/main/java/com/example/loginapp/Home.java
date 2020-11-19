@@ -53,14 +53,14 @@ public class Home extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_home, container, true);
+        View rootView = inflater.inflate(R.layout.main_page, container, true);
         // Inflate the layout for this fragment
 
-        textName = (TextView) rootView.findViewById(R.id.nom);
-        textFirstName = (TextView) rootView.findViewById(R.id.prenom);
-        textPassword = (TextView) rootView.findViewById(R.id.password);
-        passwordButton = (Button) rootView.findViewById(R.id.showPassword);
-        passwordButton.setOnClickListener(passwordBtnListener);
+        //textName = (TextView) rootView.findViewById(R.id.nom);
+        //textFirstName = (TextView) rootView.findViewById(R.id.prenom);
+        //textPassword = (TextView) rootView.findViewById(R.id.password);
+        //passwordButton = (Button) rootView.findViewById(R.id.showPassword);
+        //passwordButton.setOnClickListener(passwordBtnListener);
 
         return rootView;
     }
